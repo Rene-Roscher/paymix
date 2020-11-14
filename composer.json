@@ -54,5 +54,5 @@
                 "RServices\\PayMix\\PaymixServiceProvider"
             ]
         }
-    },
+    }
 }
