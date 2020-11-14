@@ -57,7 +57,7 @@ class PayPalRepositoryInterface extends PaymentRepository
         );
 
         $pp_payment = new Payment();
-        $pp_payment->setIntent($transactionData->getIntent())->setPayer($pp_payer)->setRedirectUrls($pp_urls)->setTransactions(compact('pp_transaction'));
+        $pp_payment->setIntent($transactionData->getIntent())->setPayer($pp_payer)->setRedirectUrls($pp_urls)->setTransactions([$pp_transaction]);
 
         $pp_payment->create($this->apiContext);
 
