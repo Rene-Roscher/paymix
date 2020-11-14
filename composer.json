@@ -1,0 +1,58 @@
+{
+    "name": "rene-roscher/paymix",
+    "description": "Simplified Payments of many Providers",
+    "keywords": [
+        "rene-roscher",
+        "paymix",
+		"paypal",
+		"stripe",
+		"mollie",
+		"amazon pay",
+		"apple pay",
+		"google pay",
+		"payment api client",
+		"laravel"
+    ],
+    "homepage": "https://github.com/rene-roscher/paymix",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rene Roscher",
+            "email": "r.roscher@r-services.eu",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0",
+		"paypal/rest-api-sdk-php": "^1.14"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RServices\\PayMix\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+	"extra": {
+        "laravel": {
+            "providers": [
+                "RServices\\PayMix\\PaymixServiceProvider"
+            ]
+        }
+    },
+}
